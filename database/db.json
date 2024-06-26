@@ -1,0 +1,22 @@
+{
+    "products": [
+        {
+            "name": "Placa Gamer",
+            "price": "15",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiWxtXGiYWONwcilZRx6xNhG_eO_84NJH3qA&s",
+            "id": 1
+        },
+        {
+            "name": "Gameboy Advance",
+            "price": "999",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Gameboy-Advance-SP-Mk2.jpg/1200px-Gameboy-Advance-SP-Mk2.jpg",
+            "id": 2
+        },
+        {
+            "name": "Caneca Darth Vader",
+            "price": "50",
+            "image": "https://m.media-amazon.com/images/I/51bn3HVgaKL._AC_UF350,350_QL80_.jpg",
+            "id": 2
+        }
+    ]
+}

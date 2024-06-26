@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-size: 100%;
+    list-style-type: none;
+}
+
+:root{
+    --cor-1: #8c0375;
+    --cor-2: #c004d9;
+    --cor-3: #9303a6;
+    --cor-4: #5d04d9;
+    --cor-5: #03318c;
+    --cor-do-texto: #000;
+
+    --pixel-font: "Pixelify Sans", sans-serif;
+}
+
+/*Mobile First*/
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+/* cabeçalho */
+.header{
+    background-color: var(--cor-5);
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+img.logo_aluraGeek{
+    width: 85%;
+}
+
+
+/* seções do main */
+main{
+    display: flex;
+    flex-direction: column-reverse;
+    flex-grow: 1;
+}
+
+
+section.section__products{
+    height: 50vh;
+}
+
+.title{
+    font: normal 1.5rem var(--pixel-font);
+    text-align: center;
+}
+
+.product-container{
+    width: 200px;
+    background-color: var(--cor-5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* rodape da página */
+footer{
+    background-color: var(--cor-5);
+    font: 1em var(--pixel-font);
+    color: #fff;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img.logo_aluraGeek-footer{
+    width: 50%;
+}
