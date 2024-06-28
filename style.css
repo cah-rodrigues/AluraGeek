@@ -72,9 +72,16 @@ section.section__products{
     width: 100vw;
     height: 50vh;
     margin: 1rem 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 div.product-container{
+    width: 80vw;
+    height: 55vh;
     overflow-y: scroll;
     margin: 0.5rem 1rem;
     display: flex;
@@ -102,7 +109,7 @@ div.img-container{
     justify-content: center;
 }
 
-#imagem{
+.image-width{
     width: 95%;
     border: 1mm solid var(--cor-6);
     border-radius: 5%;
@@ -194,15 +201,16 @@ form.add-products-form{
 
 /* rodape da página */
 footer{
+    padding: 1rem 0;
     position: fixed;
     bottom: 0;
     width: 100vw;
+    height: 4rem; 
     margin-top: 1rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
     background-color: var(--cor-5);
     font: 0.8rem var(--font-3);
     color: #fff;
-    height: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -232,12 +240,13 @@ img.logo_aluraGeek-footer{
     section.section__products{
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         align-items: center;
     }
 
     div.product-container{
-        width: 35rem;
+        max-width: 80vw;
+        max-height: 100vh;
     }
 }
 
@@ -342,11 +351,10 @@ img.logo_aluraGeek-footer{
     /*Estilização do rodapé*/
     footer{  
         position: fixed;
-        padding-bottom: 0.5rem;
         background-color: var(--cor-5);
         font: 1em var(--font-3);
         color: #fff;
-        height: 4rem;
+        height: 4.5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
