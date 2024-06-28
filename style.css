@@ -19,7 +19,8 @@ body{
     --cor-3: #9303a6;
     --cor-4: #5d04d9;
     --cor-5: #03318c;
-    --border-color: #000;
+    --cor-6: #000;
+    --cor-7: #fff;
     --text-color-1: #000;
     --text-color-2:#fff;
 
@@ -28,7 +29,7 @@ body{
     --font-3: "IBM Plex Mono", serif;
 }
 
-/*Mobile First*/
+/*Mobile First - configurações gerais*/
 body{
     display: flex;
     flex-direction: column;
@@ -37,9 +38,25 @@ body{
     margin: 0;
 }
 
+main{
+   padding-top: 4.5rem;
+    display: flex; 
+    flex-direction: column-reverse;
+    flex-grow: 1;
+    justify-content: start;
+}
+
+.title-products, .title-form {
+    font: normal 1.5rem var(--font-1);
+    text-align: center;
+}
+
 
 /* cabeçalho */
 .header{
+    position: fixed;
+    top: 0;
+    width: 100vw;
     background-color: var(--cor-5);
     height: 4rem;
     display: flex;
@@ -47,46 +64,37 @@ body{
 }
 
 img.logo_aluraGeek{
-    width: 85%;
+    width: 80%;
 }
-
-main{
-    /* display: flex; 
-    flex-direction: column-reverse;*/
-    flex-grow: 1;
-}
-
 
 /*Estilização da seção de produtos*/
 section.section__products{
+    width: 100vw;
     height: 50vh;
-}
-
-.title{
-    font: normal 1.5rem var(--font-1);
-    text-align: center;
+    margin: 1rem 0;
 }
 
 div.product-container{
+    overflow-y: scroll;
+    margin: 0.5rem 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
 div.card{
-    width: 10rem;
-    height: 15rem;
-   margin: 0.3rem;
+    width: 7.5rem;
+    height: 12rem;
+    margin: 0.5rem;
     padding: 0.5rem;
     border-radius: 5%;
-    border: 1mm solid var(--border-color);
+    border: 1mm solid var(--cor-6);
     background-color: var(--cor-5);
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-around;
     align-items: center;
 }
-
 
 div.img-container{
     margin-top: 0.2rem;
@@ -96,12 +104,12 @@ div.img-container{
 
 #imagem{
     width: 95%;
-    border: 1mm solid var(--border-color);
+    border: 1mm solid var(--cor-6);
     border-radius: 5%;
 }
 
 div.card-informations{
-    font: 0.8rem var(--font-1);
+    font: 0.8rem var(--font-2);
     color: var(--text-color-2);
     margin-top: 0.5rem;
 }
@@ -118,22 +126,240 @@ button.delete-button{
     border: none;
 }
 
+button.delete-button:hover{
+    transform: scale(1.2);
+    transition: all 0.5s ease-in;
+}
+
 /*Estilização do formulário para adição de produtos*/
 
+form.add-products-form{
+    margin: 0.5rem 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
 
+.input{
+    width: 14rem;
+    height: 2rem;
+    border: 1mm solid var(--cor-5);
+    border-radius: 2rem;
+    transition-duration: 0.4s;
+}
+.input:hover{
+    transform: scale(1.1);
+    border: 1mm solid var(--cor-4);
+}
+
+.input::placeholder{
+    font: 1em var(--font-3);
+    color: var(--cor-5);
+    text-indent: 0.5rem;
+}
+
+.button{
+    font: 1em var(--font-3);
+    width: 8rem;
+    height: 2rem;
+    margin: 0.2rem;
+    border: 1mm solid var(--cor-5);
+    border-radius: 0.5rem;
+    transition-duration: 0.4s;
+}
+
+.button:hover{
+    transform: scale(1.1);
+}
+
+#salvar{
+    background-color: var(--cor-5);
+    color: var(--text-color-2);
+}
+#salvar:hover{
+    background-color: var(--cor-4);
+    border: 1mm solid var(--cor-4);
+}
+
+#cancelar{
+    background-color: var(--cor-7);
+    color: var(--cor-5);
+}
+#cancelar:hover{
+    border: 1mm solid var(--cor-4);
+    color: var(--cor-4);
+}
 
 /* rodape da página */
 footer{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
     background-color: var(--cor-5);
-    font: 1em var(--font-3);
+    font: 0.8rem var(--font-3);
     color: #fff;
     height: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 img.logo_aluraGeek-footer{
-    width: 50%;
+    width: 10rem;
+    height: 2.5rem;
 }
+
+.linkedin__link a{
+    color: var(--text-color-2);
+    transition: 0.4s;
+}
+.linkedin__link a:hover{
+    color: var(--cor-2);
+    font-size: 1.4rem;
+    transform: scale(1.1);
+}
+
+
+
+/*Media queries*/
+@media (min-width: 768px) {
+    section.section__products{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    div.product-container{
+        width: 35rem;
+    }
+}
+
+
+@media (min-width: 1024px) {
+
+    /*Configurações gerais do css*/
+    main{
+        padding-top: 3rem;
+        display: flex; 
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
+        flex-grow: 1;
+    }
+
+    section{
+        margin: 1rem;
+        padding: 1rem 0;
+    }
+
+    h1.title-products, .title-form {
+        font: normal 2rem var(--font-1);
+        text-align: center;
+    }
+
+
+    /*Estilização da seção de produtos*/
+
+    section.section__products{
+        width: 50vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: end;
+        }
+
+
+    div.product-container{
+        width: 30rem;
+        height: 70vh;
+        overflow-x: scroll;
+        margin: 1rem 2rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-content: start;
+    }
+
+    div.card{
+        width: 8rem;
+        height: 13rem;
+    }
+
+    /*Estilização do formulário para adição de produtos*/
+
+    section.section__form{
+        width: 35vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: start;
+    }
+
+    form.add-products-form{
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+
+    .input{
+        width: 18rem;
+        height: 3rem;
+        border: 1mm solid var(--cor-5);
+        border-radius: 2rem;
+    }
+    
+    .input::placeholder{
+        font: 1.2rem var(--font-3);
+        color: var(--cor-5);
+        text-indent: 0.7rem;
+    }
+    
+    .button{
+        font: bold 1.2em var(--font-3);
+        width: 8rem;
+        height: 3rem;
+        gap: 0.9rem;
+        border: 1mm solid var(--cor-5);
+        border-radius: 0.6rem;
+    }
+
+
+
+    /*Estilização do rodapé*/
+    footer{  
+        position: fixed;
+        padding-bottom: 0.5rem;
+        background-color: var(--cor-5);
+        font: 1em var(--font-3);
+        color: #fff;
+        height: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media (min-width: 1300px) {
+    
+    section.section__form{
+        width: 40vw;
+    }
+}
+
+

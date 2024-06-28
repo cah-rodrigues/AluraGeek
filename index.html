@@ -14,8 +14,9 @@
 
     <main>
          <section class="section__products">
-            <h1 class="title">Meus Produtos</h1>
+            <h1 class="title-products">Meus Produtos</h1>
             <div data-product class="product-container">
+
 
                 <div class="card">
                     <div class="img-container">
@@ -35,26 +36,29 @@
 
             </div> 
 
-        </section>   
+        </section> 
 
-        <section class="container__form">
-            <h1>Adicionar produto:</h1>
-            <form class="form-container" data-form>
-                <input data-name placeholder="Nome" type="text" required>
-                <input data-price placeholder="Preço" type="text" required>
-                <input data-image placeholder="Foto" type="text" required>
+        <section class="section__form">
+            <h1 class="title-form">Adicionar produto:</h1>
 
-                <div class="button-container">
-                    <button type="submit" class="button-submit" id="salvar">Salvar</button>
-                    <button type="reset" class="button-cancel" id="cancelar">Cancelar</button>
-                </div>
-            </form>
+            <div class="container-form">
+                <form class="add-products-form" data-form>
+                    <input class="input" data-name placeholder="Nome..." type="text" required>
+                    <input class="input" data-price placeholder="Preço..." type="text" required>
+                    <input class="input" data-image placeholder="Foto do produto..." type="text" required>
+                        <div class="button-container">
+                            <button type="submit" class="button" id="salvar">Salvar</button>
+                            <button type="reset" class="button" id="cancelar">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+
         </section> 
     </main>
 
     <footer class="footer">
         <img class="logo_aluraGeek-footer" src="imagens/Property 1=White.svg" alt="Logo do AluraGeek">
-        <p>Desenvolvido por Carla Rodrigues</p>
+        <p>Desenvolvido por <span class="linkedin__link"><a href="https://www.linkedin.com/in/carla-rodrigues-dev/" target="_blank">Carla Rodrigues</a></span></p>
     </footer> 
 </body>
 </html>
