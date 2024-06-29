@@ -1,28 +1,3 @@
 {
-  "products": [
-    {
-      "name": "Caneca Darth Vader",
-      "price": "50",
-      "image": "https://m.media-amazon.com/images/I/51bn3HVgaKL._AC_UF350,350_QL80_.jpg",
-      "id": 3
-    },
-    {
-      "name": "Livro Gravity Falls",
-      "image": "https://m.media-amazon.com/images/I/91OvTwFvWKL._SL1500_.jpg",
-      "price": "49,90",
-      "id": 4
-    },
-    {
-      "name": "Caneca Stormtrooper",
-      "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQm5yleve4_gBbAwabNvwBpPq6gx6D_28GLdumgzmQz5gRyLqo11hGORlUOnApbNrL3cRoGjhvEXu4g46nuSselRD7VWSVYqdbwijPFaC_5sKuQWaStKTj4",
-      "price": "50,00",
-      "id": 6
-    },
-    {
-      "name": "Boné Pacman",
-      "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTIC0Z9IiBXmJDnUH97mek-tDPVUpjXdj8UlKPuo9CRYBBuaRuarsSBdm-G3jMwcfOzZfcq-aHXgGIw7c33RRIaIuxkovTMPcLGC-VqPiRg_0pkWypNFavN_g&usqp=CAE",
-      "price": "45,00",
-      "id": 7
-    }
-  ]
+  "products": []
 }
