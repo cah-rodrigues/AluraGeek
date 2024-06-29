@@ -70,7 +70,6 @@ img.logo_aluraGeek{
 /*Estilização da seção de produtos*/
 section.section__products{
     width: 100vw;
-    height: 50vh;
     margin: 1rem 0;
     display: flex;
     flex-wrap: nowrap;
@@ -80,26 +79,25 @@ section.section__products{
 }
 
 div.product-container{
-    width: 80vw;
-    height: 55vh;
+    width: 85vw;
     overflow-y: scroll;
     margin: 0.5rem 1rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
 }
 
 div.card{
-    width: 7.5rem;
-    height: 12rem;
+    min-width: 7.5rem;
+    max-width: 8rem;
+    height: 13rem;
     margin: 0.5rem;
     padding: 0.5rem;
     border-radius: 5%;
     border: 1mm solid var(--cor-6);
-    background-color: var(--cor-5);
+    background-color: var(--cor-4);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -110,26 +108,33 @@ div.img-container{
 }
 
 .image-width{
-    width: 95%;
+    width: 6.5rem;
+    height: 7rem;
     border: 1mm solid var(--cor-6);
     border-radius: 5%;
 }
 
 div.card-informations{
-    font: 0.8rem var(--font-2);
     color: var(--text-color-2);
     margin-top: 0.5rem;
 }
 
+div.card-informations h2{
+    font: bold 1rem var(--font-2);
+}
+
+div.card-informations p{
+    font: 0.9rem var(--font-3);
+}
+
 div.card-value{
-    margin-top: 0.4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 button.delete-button{
-    background-color: var(--cor-5);
+    background-color: var(--cor-4);
     border: none;
 }
 
@@ -152,6 +157,8 @@ form.add-products-form{
 .input{
     width: 14rem;
     height: 2rem;
+    text-indent: 1rem;
+    font: 1em var(--font-3);
     border: 1mm solid var(--cor-5);
     border-radius: 2rem;
     transition-duration: 0.4s;
@@ -164,7 +171,7 @@ form.add-products-form{
 .input::placeholder{
     font: 1em var(--font-3);
     color: var(--cor-5);
-    text-indent: 0.5rem;
+    text-indent: 1rem;
 }
 
 .button{
@@ -201,6 +208,7 @@ form.add-products-form{
 
 /* rodape da página */
 footer{
+    margin-top: 1rem;
     padding: 1rem 0;
     position: fixed;
     bottom: 0;
@@ -238,6 +246,8 @@ img.logo_aluraGeek-footer{
 /*Media queries*/
 @media (min-width: 768px) {
     section.section__products{
+        padding-bottom: 2rem;
+        height: 50vh;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -245,8 +255,12 @@ img.logo_aluraGeek-footer{
     }
 
     div.product-container{
-        max-width: 80vw;
-        max-height: 100vh;
+        max-width: 30rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-content: start;
     }
 }
 
@@ -278,17 +292,17 @@ img.logo_aluraGeek-footer{
 
     section.section__products{
         width: 50vw;
-        height: auto;
+        height: 85vh;
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        justify-content: start;
         align-content: end;
         }
 
 
     div.product-container{
-        width: 30rem;
-        height: 70vh;
+        width: 40rem;
         overflow-x: scroll;
         margin: 1rem 2rem;
         display: flex;
@@ -363,11 +377,11 @@ img.logo_aluraGeek-footer{
 }
 
 
-@media (min-width: 1300px) {
+/* @media (min-width: 1300px) {
     
     section.section__form{
         width: 40vw;
     }
-}
+} */
 
 
