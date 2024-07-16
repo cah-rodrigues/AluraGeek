@@ -15,5 +15,9 @@ Faça sua própria loja online Geek! Você só precisa adicionar e remover produ
 
 https://challenge-alura-geek-beige.vercel.app/
 
+<div align="center">
+
 ![Print da tela do ALurageek em funcionamento](imagens/print-readme.png)
+
+</div>
 
